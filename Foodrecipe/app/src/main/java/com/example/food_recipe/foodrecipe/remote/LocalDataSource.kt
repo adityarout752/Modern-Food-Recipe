@@ -1,6 +1,7 @@
 package com.example.food_recipe.foodrecipe.remote
 
 import com.example.food_recipe.foodrecipe.db.FavouritesEntity
+import com.example.food_recipe.foodrecipe.db.FoodJokeEntity
 import com.example.food_recipe.foodrecipe.db.RecipesDao
 import com.example.food_recipe.foodrecipe.db.RecipesEntity
 import kotlinx.coroutines.flow.Flow
@@ -10,26 +11,37 @@ class LocalDataSource @Inject constructor(
     private val recipesDao: RecipesDao
 ) {
 
-    fun readRecipes() : Flow<List<RecipesEntity>> {
+    fun readRecipes(): Flow<List<RecipesEntity>> {
         return recipesDao.readRecipes()
     }
+
     suspend fun insertRecipes(recipesEntity: RecipesEntity) {
-       return  recipesDao.insertRecipes(recipesEntity)
+        return recipesDao.insertRecipes(recipesEntity)
     }
 
-    fun readFavouritesRecipes() : Flow<List<FavouritesEntity>> {
+    fun readFavouritesRecipes(): Flow<List<FavouritesEntity>> {
         return recipesDao.readFavouriteRecipes()
     }
+
     suspend fun insertFavouritesRecipes(favouritesEntity: FavouritesEntity) {
-        return  recipesDao.insertFavouritesRecipes(favouritesEntity)
+        return recipesDao.insertFavouritesRecipes(favouritesEntity)
     }
 
     suspend fun deleteFavouritesRecipes(favouritesEntity: FavouritesEntity) {
-        return  recipesDao.deleteFavouritesRecipes(favouritesEntity)
+        return recipesDao.deleteFavouritesRecipes(favouritesEntity)
     }
 
     suspend fun deleteAllFavouritesRecipes() {
-        return  recipesDao.deleteAllFavouritesRecipes()
+        return recipesDao.deleteAllFavouritesRecipes()
+    }
+
+    fun readFoodJoke(): Flow<List<FoodJokeEntity>> {
+        return recipesDao.readFoodJoke()
+    }
+
+
+    suspend fun insertFoodJoke(foodJokeEntity: FoodJokeEntity) {
+        recipesDao.insertFoodJoke(foodJokeEntity)
     }
 
 

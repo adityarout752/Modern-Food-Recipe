@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/recipesFragment"
         android:name="com.example.food_recipe.foodrecipe.ui.fragments.recipes.RecipesFragment"
-        android:label="fragment_recipes"
+        android:label="Recipes"
         tools:layout="@layout/fragment_recipes" >
         <action
             android:id="@+id/action_recipesFragment_to_recipesBottomSheet"
@@ -23,7 +23,7 @@
     <fragment
         android:id="@+id/favoriteRecipesFragment"
         android:name="com.example.food_recipe.foodrecipe.ui.fragments.favourites.FavoriteRecipesFragment"
-        android:label="fragment_favorite_recipes"
+        android:label="Favourites Recipes"
         tools:layout="@layout/fragment_favorite_recipes" >
         <action
             android:id="@+id/action_favoriteRecipesFragment_to_detailsActivity"
@@ -31,8 +31,8 @@
     </fragment>
     <fragment
         android:id="@+id/foodjokeFragment"
-        android:name="com.example.food_recipe.foodrecipe.ui.fragments.foodjoke.foodjokeFragment"
-        android:label="fragment_foodjoke"
+        android:name="com.example.food_recipe.foodrecipe.ui.fragments.foodjoke.FoodjokeFragment"
+        android:label="Food Joke"
         tools:layout="@layout/fragment_foodjoke" />
     <dialog
         android:id="@+id/recipesBottomSheet"

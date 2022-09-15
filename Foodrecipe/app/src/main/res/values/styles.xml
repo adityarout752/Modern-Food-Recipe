@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="CustomChipStyle" parent="Widget.MaterialComponents.Chip.Filter">
-        <item name="chipBackgroundColor">@color/checkedChipBackgroundColor</item>
+        <item name="chipBackgroundColor">@color/white</item>
         <item name="android:textColor">@color/chipTextColor</item>
         <item name="checkedIconTint">@color/chipTextColor</item>
+        <item name="checkedChip">@color/checkedChipBackgroundColor</item>
     </style>
 
     <style name="DetailsActivityStyle" parent="Theme.MaterialComponents.DayNight.NoActionBar">

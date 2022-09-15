@@ -19,10 +19,12 @@ import com.example.foodrecipe.R
 import com.example.foodrecipe.adapters.RecipesAdapter
 import com.example.foodrecipe.databinding.FragmentRecipesBinding
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.launch
 import observeOnce
 
 @Suppress("DEPRECATION")
+@ExperimentalCoroutinesApi
 @AndroidEntryPoint
 class RecipesFragment : Fragment(), SearchView.OnQueryTextListener {
 
@@ -61,7 +63,7 @@ class RecipesFragment : Fragment(), SearchView.OnQueryTextListener {
             recipesViewModel.backOnline = it
         }
 //        requestApiData()
-        readDatabase()
+
 
         lifecycleScope.launch {
             networkListener = NetworkListener()

@@ -41,7 +41,7 @@ class RecipesBottomSheet : BottomSheetDialogFragment() {
        mealTypeChip = value.selectedMealType
             dietTypeChip = value.selectedDietType
             Log.d("TAG",mealTypeChip)
-            updateChip(value.selectedDietTypeId,mView.mealType_chipGroup)
+            updateChip(value.selectedMealTypeId,mView.mealType_chipGroup)
             updateChip(value.selectedDietTypeId,mView.dietType_chipGroup)
         }
         mView.mealType_chipGroup.setOnCheckedStateChangeListener { group, selectedChipId ->

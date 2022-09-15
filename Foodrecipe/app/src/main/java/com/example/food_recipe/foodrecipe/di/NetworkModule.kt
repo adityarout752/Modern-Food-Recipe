@@ -1,4 +1,4 @@
-package com.example.foodrecipe.di
+package com.example.food_recipe.foodrecipe.di
 
 import com.example.foodrecipe.constants.Constants.Companion.BASE_URL
 import com.example.food_recipe.foodrecipe.remote.FoodRecipesApi

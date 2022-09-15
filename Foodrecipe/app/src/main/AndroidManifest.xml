@@ -8,25 +8,32 @@
     <application
         android:name="com.example.food_recipe.foodrecipe.MyApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/healthy_eating"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/healthy_eating"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.FoodRecipe">
+        android:theme="@style/Theme.FoodRecipe"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.example.food_recipe.foodrecipe.ui.MainActivity"
+            android:exported="false" />
         <activity
             android:name="com.example.food_recipe.foodrecipe.ui.DetailsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Details"
             android:label="Details"
-            android:theme="@style/DetailsActivityStyle"
-            android:exported="false" />
-        <activity android:name="com.example.food_recipe.foodrecipe.ui.MainActivity">
+            />
+
+        <activity
+            android:name="com.example.food_recipe.foodrecipe.ui.SplashActivity"
+            android:theme="@style/SplashScreenStyle"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

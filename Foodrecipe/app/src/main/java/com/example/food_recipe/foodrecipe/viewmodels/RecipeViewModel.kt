@@ -33,7 +33,7 @@ class RecipeViewModel @ViewModelInject constructor(
         }
 
     fun applyQuaries(): HashMap<String, String> {
-
+        val queries: HashMap<String, String> = HashMap()
         viewModelScope.launch {
             readMealAndDietType.collect{ values->
                 mealType =values.selectedMealType
@@ -41,7 +41,7 @@ class RecipeViewModel @ViewModelInject constructor(
 
             }
         }
-        val queries: HashMap<String, String> = HashMap()
+
         queries[Constants.QUERY_NUMBER] = Constants.DEFAULT_RECIPES_NUMBER
         queries[Constants.QUERY_API_KEY] = Constants.API_KEY
         queries[Constants.QUERY_TYPE] = mealType
